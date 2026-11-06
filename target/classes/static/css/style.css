@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: linear-gradient(135deg, #edf3ff, #f8faff);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+}
+
+.card {
+    width: 100%;
+    max-width: 680px;
+    padding: 42px;
+    background: #ffffff;
+    border: 1px solid #e5eaf3;
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(31, 54, 92, 0.09);
+}
+
+.login-card {
+    max-width: 460px;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #4263eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0 0 14px;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.muted {
+    color: #667085;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 17px;
+    background: #3157d5;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(0.95);
+}
+
+.button-secondary {
+    background: #172b65;
+}
+
+.button-light {
+    background: #edf1fb;
+    color: #26385f;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 22px;
+}
+
+form label {
+    display: block;
+    margin: 18px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d7deea;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4263eb;
+    box-shadow: 0 0 0 3px rgba(66, 99, 235, 0.12);
+}
+
+.error-message, .success-message, .info-panel, .credentials {
+    margin-top: 18px;
+    padding: 13px 15px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #a61b1b;
+    background: #fff0f0;
+}
+
+.success-message {
+    color: #176b3a;
+    background: #eaf8ef;
+}
+
+.info-panel, .credentials {
+    color: #34415d;
+    background: #f3f6fc;
+    line-height: 1.5;
+}
+
+.credentials p {
+    margin: 8px 0 0;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 22px;
+    color: #3157d5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media (max-width: 560px) {
+    .card {
+        padding: 28px 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions .button, .actions form, .actions form button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Spring Security</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="container">
+    <section class="card login-card">
+        <p class="eyebrow">AUTHENTIFICATION</p>
+        <h1>Veuillez vous identifier</h1>
+        <p class="muted">Connectez-vous avec l'un des comptes de démonstration.</p>
+
+        <div class="error-message" th:if="${param.error}">
+            Identifiant ou mot de passe invalide.
+        </div>
+        <div class="success-message" th:if="${param.logout}">
+            Vous avez été déconnecté avec succès.
+        </div>
+
+        <form th:action="@{/login}" method="post">
+            <label for="username">Nom d'utilisateur</label>
+            <input id="username" type="text" name="username" placeholder="Ex. : user" required autofocus>
+
+            <label for="password">Mot de passe</label>
+            <input id="password" type="password" name="password" placeholder="Votre mot de passe" required>
+
+            <button class="button full-width" type="submit">Se connecter</button>
+        </form>
+
+        <div class="credentials">
+            <strong>Comptes de test</strong>
+            <p><b>Utilisateur :</b> user / 1111</p>
+            <p><b>Administrateur :</b> admin / 1234</p>
+        </div>
+        <a class="text-link" th:href="@{/}">← Retour à l'accueil</a>
+    </section>
+</main>
+</body>
+</html>

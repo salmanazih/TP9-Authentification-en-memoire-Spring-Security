@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace administrateur</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="container">
+    <section class="card">
+        <p class="eyebrow">ESPACE SÉCURISÉ</p>
+        <h1>Bienvenue dans l'espace administrateur</h1>
+        <p class="muted">Cette page est réservée aux utilisateurs possédant le rôle ADMIN.</p>
+        <div class="info-panel"><strong>Rôle requis :</strong> ROLE_ADMIN</div>
+        <div class="actions">
+            <a class="button button-secondary" th:href="@{/}">Accueil</a>
+            <form th:action="@{/logout}" method="post">
+                <button class="button button-light" type="submit">Se déconnecter</button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

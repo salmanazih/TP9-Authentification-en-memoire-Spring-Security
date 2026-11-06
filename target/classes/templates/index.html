@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Spring Security</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main class="container">
+    <section class="card">
+        <p class="eyebrow">SPRING SECURITY DEMO</p>
+        <h1>Bienvenue sur l'application sécurisée</h1>
+        <p class="muted">La page d'accueil est publique. Les espaces utilisateur et administrateur nécessitent une connexion.</p>
+
+        <div class="actions">
+            <a class="button" th:href="@{/user/dashboard}">Espace utilisateur</a>
+            <a class="button button-secondary" th:href="@{/admin/dashboard}">Espace administrateur</a>
+            <a class="button button-light" th:href="@{/login}">Se connecter</a>
+        </div>
+
+        <p class="success-message" th:if="${param.logout}">Vous avez été déconnecté avec succès.</p>
+    </section>
+</main>
+</body>
+</html>
